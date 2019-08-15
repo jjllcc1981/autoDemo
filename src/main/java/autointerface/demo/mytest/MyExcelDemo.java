@@ -36,7 +36,7 @@ public class MyExcelDemo {
     public static Object[][] data() throws IOException {
         System.out.println(System.getProperty("user.dir"));
 //        String FilePath = System.getProperty("user.dir") + "\\src\\main\\resources\\excel.mytest";
-        String FilePath = System.getProperty("user.dir") + "/classes/excel/mytest";
+        String FilePath = System.getProperty("user.dir") + "/classes/excel.mytest";
         String FileName = "exceldemo.xlsx";
         String sheetName = "testData";
         return ExcelUnit.getExcelData(FilePath, FileName, sheetName);

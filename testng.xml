@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="接口自动化测试" verbose="1" >
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    </listeners>
+
+    <test name="interface -- demo">
+        <classes>
+            <class name="autointerface.demo.mytest.MyTestNg">
+                <methods>
+                    <include name="getPrimaryKey"/>
+                    <include name="getById"/>
+                    <include name="getByBusinessPath"/>
+                </methods>
+            </class>
+            <class name="autointerface.demo.mytest.MyExcelDemo">
+                <methods>
+                    <include name="mockDataByExcelTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

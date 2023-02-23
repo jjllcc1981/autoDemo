@@ -6,18 +6,8 @@
 
     <test name="interface -- demo">
         <classes>
-            <class name="autointerface.demo.mytest.MyTestNg">
-                <methods>
-                    <include name="getPrimaryKey"/>
-                    <include name="getById"/>
-                    <include name="getByBusinessPath"/>
-                </methods>
-            </class>
-            <class name="autointerface.demo.mytest.MyExcelDemo">
-                <methods>
-                    <include name="mockDataByExcelTest"/>
-                </methods>
-            </class>
+            <class name="autointerface.demo.mytest.MyTestNg"/>
+            <class name="autointerface.demo.mytest.MyShowTest" />
         </classes>
     </test>
 </suite>

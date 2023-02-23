@@ -2,21 +2,20 @@ package autointerface.demo.mytest;
 
 import autointerface.demo.tools.ExcelUnit;
 import autointerface.demo.tools.SleepUnit;
+import autointerface.demo.tools.TestReport_original;
 import autointerface.demo.tools.Tools;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.io.IOException;
-
-public class MyExcelDemo {
+@Listeners({TestReport_original.class})
+public class MyExcelDemo extends AbstractTestNGSpringContextTests {
 
     private final static Logger LOG = LoggerFactory.getLogger(MyExcelDemo.class);
     private String url = "http://www.lianchengjiang.com:8799/mock/api/cy/coupon/cancel";

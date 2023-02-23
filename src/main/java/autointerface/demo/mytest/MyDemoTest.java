@@ -1,15 +1,16 @@
 package autointerface.demo.mytest;
 
-import autointerface.demo.AutodemoApplication;
+import autointerface.demo.tools.TestReport_original;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 @Slf4j
-@SpringBootTest(classes = AutodemoApplication.class)
-public class MyDemoTest {
+@Listeners({TestReport_original.class})
+public class MyDemoTest extends AbstractTestNGSpringContextTests {
     @BeforeClass
     public void beforeClass() {
         log.info("==== MyDemoTest  star ====");

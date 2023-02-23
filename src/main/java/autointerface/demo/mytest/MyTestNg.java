@@ -1,20 +1,20 @@
 package autointerface.demo.mytest;
 
-import autointerface.demo.AutodemoApplication;
 import autointerface.demo.mybatis.entity.MockDataInfo;
 import autointerface.demo.mybatis.mapper.MockDataInfoMapper;
+import autointerface.demo.tools.TestReport_original;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
-@SpringBootTest(classes = AutodemoApplication.class)
+@Listeners({TestReport_original.class})
 public class MyTestNg extends AbstractTestNGSpringContextTests {
     private final static Logger LOG = LoggerFactory.getLogger(MyTestNg.class);
 

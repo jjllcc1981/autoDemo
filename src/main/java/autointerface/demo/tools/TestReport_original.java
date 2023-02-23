@@ -9,14 +9,12 @@ import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.regex.Matcher;
-
-public class TestReport implements IReporter {
+public class TestReport_original implements IReporter {
 
     // 定义生成测试报告的路径和文件名，为兼容Windows和Linux此处使用File.separator代替分隔符
     private String path = System.getProperty("user.dir") + File.separator + "report.html";
     // 定义html样式模板所在路径
     private String templatePath = System.getProperty("user.dir") + File.separator + "template";
-
 
     private int testsPass = 0;
 
@@ -30,13 +28,13 @@ public class TestReport implements IReporter {
 
     private String name;
 
-    public TestReport() {
+    public TestReport_original() {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd-HH:mm:ss");
         name = "医生工作站";
 //        name = "就诊人+医院科室自动化"+formatter.format(System.currentTimeMillis());
     }
 
-    public TestReport(String name) {
+    public TestReport_original(String name) {
         this.name = name;
         if (this.name == null) {
             SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmssSSS");

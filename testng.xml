@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="接口自动化测试" verbose="1" >
     <listeners>
-        <listener class-name="autointerface.demo.tools.TestReport"/>
+        <listener class-name="autointerface.demo.tools.TestReport_original"/>
     </listeners>
 
     <test name="interface -- demo">

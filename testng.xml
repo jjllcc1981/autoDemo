@@ -1,12 +1,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="接口自动化测试" verbose="1" >
     <listeners>
-        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="autointerface.demo.tools.TestReport"/>
     </listeners>
 
     <test name="interface -- demo">
         <classes>
-            <class name="autointerface.demo.mytest.MyTestNg"/>
+            <class name="autointerface.demo.mytest.MyDemoTest"/>
             <class name="autointerface.demo.mytest.MyShowTest" />
         </classes>
     </test>
